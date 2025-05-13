@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentYearSpan.textContent = new Date().getFullYear();
     }
 
+   
     document.querySelectorAll('a.nav-link[href^="#"], .hero-section a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -49,7 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (href.length > 1 && targetElement) {
                 e.preventDefault();
-
+                
+                
                 const headerOffset = siteHeader ? siteHeader.offsetHeight : 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -59,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth'
                 });
 
+                
                 const navbarToggler = document.querySelector('.navbar-toggler');
                 const navbarCollapse = document.querySelector('.navbar-collapse.show');
                 if (navbarCollapse && navbarToggler.offsetParent !== null) { 
@@ -67,5 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    
+    const testimonialCarouselElement = document.getElementById('testimonialCarousel');
+    if (testimonialCarouselElement) {
+        
+    } else {
+       
+    }
 
 });
